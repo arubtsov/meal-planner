@@ -5,6 +5,7 @@ export enum IngredientType {
     Vegetables = 'Vegetables',
     Fruits = 'Fruits',
     Meat = 'Meat',
+    Fish = 'Fish',
     Spices = 'Spices',
     Greens = 'Greens',
     Herbs = 'Herbs',
@@ -16,6 +17,8 @@ export enum IngredientType {
     Pasta = 'Pasta',
     Grains = 'Grains',
     Other = 'Other',
+    Bread = 'Bread',
+    Pulses = 'Pulses',
 }
 
 export enum PortionType {
