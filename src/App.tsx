@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { Routes, Route } from "react-router-dom";
-import { MainLayout } from './components/';
+import { Routes, Route, Navigate } from "react-router-dom";
+import { MainLayout, Ingredients } from './components/';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}></Route>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/ingredients" element={<Ingredients />} />
+        <Route path="*" element={<Navigate to="/ingredients" replace />} />
+      </Route>
     </Routes>
   );
 }
