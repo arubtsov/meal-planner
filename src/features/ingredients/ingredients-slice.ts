@@ -37,12 +37,12 @@ export interface Ingredient {
 }
 
 interface IngredientsState {
-    ingredients: Ingredient[]
+    list: Ingredient[]
 }
 
 // Define the initial state using that type
 const initialState: IngredientsState = {
-    ingredients: [],
+    list: [],
 }
 
 export const ingredientsSlice = createSlice({
@@ -50,16 +50,16 @@ export const ingredientsSlice = createSlice({
   initialState,
   reducers: {
     addIngredient(state, action: PayloadAction<Ingredient>) {
-      state.ingredients.push(action.payload)
+      state.list.push(action.payload)
     },
     deleteIngredient(state, action: PayloadAction<string>) {
-        state.ingredients = state.ingredients.filter(ingredient => ingredient.id !== action.payload)
+        state.list = state.list.filter(ingredient => ingredient.id !== action.payload)
     }
   },
 })
 
 export const { addIngredient, deleteIngredient } = ingredientsSlice.actions
 
-export const selectIngredients = (state: RootState) => state.ingredients.ingredients
+export const selectIngredients = (state: RootState) => state.ingredients.list
 
 export default ingredientsSlice.reducer

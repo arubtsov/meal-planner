@@ -1,11 +1,26 @@
+import {
+  persistStore,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER
+} from 'redux-persist'
 import { configureStore } from '@reduxjs/toolkit'
-import { ingredientsSlice } from '../features/ingredients/ingredients-slice'
+import { persistedReducer } from './persisted-reducer'
 
 export const store = configureStore({
-  reducer: {
-    ingredients: ingredientsSlice.reducer,
-  },
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
+
+export const persistor = persistStore(store)
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
