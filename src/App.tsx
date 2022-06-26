@@ -1,7 +1,6 @@
-import React from 'react';
-
 import { Routes, Route, Navigate } from "react-router-dom";
-import { MainLayout, Ingredients } from './components/';
+import { MainLayout } from './components/';
+import { Ingredients } from './pages'
 
 function App() {
   return (
