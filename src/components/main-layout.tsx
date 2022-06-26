@@ -7,6 +7,7 @@ import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+
 import { Sidebar } from './sidebar'
 
 export function MainLayout() {
@@ -37,7 +38,7 @@ export function MainLayout() {
           <Container maxWidth="xl">
             <Stack direction="row">
                 <Sidebar />
-                <Box>
+                <Box py={1} px={5}>
                     <Outlet />
                 </Box>
             </Stack>
