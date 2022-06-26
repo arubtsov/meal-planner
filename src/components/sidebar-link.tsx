@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { NavLink as RouterLink, useResolvedPath, useMatch } from 'react-router-dom';
 
 import ListItem from '@mui/material/ListItem';
