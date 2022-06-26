@@ -38,7 +38,7 @@ export function MainLayout() {
           <Container maxWidth="xl">
             <Stack direction="row">
                 <Sidebar />
-                <Box py={1} px={5}>
+                <Box component="main" py={1} px={5}>
                     <Outlet />
                 </Box>
             </Stack>
