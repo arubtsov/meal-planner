@@ -30,9 +30,7 @@ export enum PortionType {
 }
 
 export interface Ingredient {
-    id: string
     name: string
-    description: string
     type: IngredientType
 }
 
@@ -53,7 +51,7 @@ export const ingredientsSlice = createSlice({
       state.list.push(action.payload)
     },
     deleteIngredient(state, action: PayloadAction<string>) {
-        state.list = state.list.filter(ingredient => ingredient.id !== action.payload)
+        state.list = state.list.filter(ingredient => ingredient.name !== action.payload)
     }
   },
 })
