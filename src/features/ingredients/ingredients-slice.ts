@@ -22,11 +22,11 @@ export enum IngredientType {
 }
 
 export enum PortionType {
-    Piece = 'piece',
-    Gram = 'gram',
-    TableSpoon = 'table spoon',
-    TeaSpoon = 'tea spoon',
-    Cup = 'cup',
+    Piece = 'Piece',
+    Gram = 'Gram',
+    TableSpoon = 'Table spoon',
+    TeaSpoon = 'Tea spoon',
+    Cup = 'Cup',
 }
 
 export interface Ingredient {
