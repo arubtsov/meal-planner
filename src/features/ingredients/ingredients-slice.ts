@@ -32,6 +32,7 @@ export enum PortionType {
 export interface Ingredient {
     name: string
     type: IngredientType
+    defaultPortion: PortionType
 }
 
 interface IngredientsState {
